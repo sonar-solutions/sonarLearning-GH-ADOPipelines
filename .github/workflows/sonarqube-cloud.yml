@@ -29,3 +29,5 @@ jobs:
         args: >
           -Dsonar.verbose=true
           -Dsonar.sources=src/
+          -Dsonar.organization=github-onboarding-examples
+          -Dsonar.projectKey=onboarding-examples-sonarqube_python-example
