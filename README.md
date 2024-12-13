@@ -36,7 +36,7 @@ Example
           -Dsonar.qualitygate.wait=true
 ```
 
-## PR Decoration Test  
+## PR Decoration Test  (still working on these instructions)
 In SonarQube (Server and Cloud), there is functionality to be able to block PR from being merged to SonarQube  
 In GitHub Actions, you need to have the following set up in your Project:  
 - Status Check Branch Policy for **SonarQube/quality gate** (https://docs.microsoft.com/en-us/azure/devops/repos/git/pr-status-policy)
