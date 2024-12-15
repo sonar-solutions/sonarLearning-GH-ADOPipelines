@@ -3,8 +3,8 @@
 This project is an example of using GitHub Actions pipeline for a python project. It demonstrates how to set up a CI/CD pipeline for a Python application.  
 We have multiple CI/CD Pipeline examples, one for running the SonarScanner and sending the results to SonarQube Server and the other for sending the results to SonarQube Cloud.  
 
-PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH AZURE DEVOPS PIPELINES  
-GitHub - SonarQube Server Integration > https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/ 
+PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTION PIPELINES  
+GitHub - SonarQube Server Integration > https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/  
 GitHub Actions Pipelines - SonarQube Cloud > https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/#ci-based-analysis 
 
 ## Important Information in Pipelines
@@ -23,8 +23,7 @@ SonarScanner Analysis Parameters > https://docs.sonarsource.com/sonarqube-server
 
 ## Example to fail the entire pipeline if Quality Gate fails
 There may be situations or branches in which you will like to fail the pipeline if the SonarQube Quality Gate fails in order to stop any other steps in the pipeline.  
-This can be done by adding ```
-sonar.qualitygate.wait=true``` 
+This can be done by adding ```sonar.qualitygate.wait=true``` 
 to the **with: args: >** section in the **SonarQube Scan** task.  
 
 Example
@@ -39,15 +38,14 @@ Example
 ## PR Decoration Test  (still working on these instructions)
 In SonarQube (Server and Cloud), there is functionality to be able to block PR from being merged to SonarQube  
 In GitHub Actions, you need to have the following set up in your Project:  
-- Status Check Branch Policy for **SonarQube/quality gate** (https://docs.microsoft.com/en-us/azure/devops/repos/git/pr-status-policy)
-- Build Validation Branch Policy (https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git#pr-triggers)
+- Setup a Branch Protetction Rule 
+- Select a Target branch to apply the rule to
+
+SonarQube Documentation:
+https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/setting-up-at-project-level/#prevent-pull-request-merge  
 
 In SonarQube Server, you need to make sure the DevOps Integration is correctly configured. Go to the Project, in Project Settings > General Settings > DevOps Platform Integration.
 In SonarQube Cloud, you need to make sure the DevOps Integration is correctly configured. Go to the Project, in Administration > General Settings > Repository Binding. 
-
-SonarQube Documentation:
-https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/setting-up-at-project-level/#prevent-pull-request-merge
-
 
 To test this, follow these steps:
 1. Create New Branch
