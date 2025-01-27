@@ -7,8 +7,8 @@ PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTION PIPELINES
 GitHub - SonarQube Server Integration > https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/  
 GitHub Actions Pipelines - SonarQube Cloud > https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/#ci-based-analysis 
 
-## Important Information in Pipelines
-- on triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever you would want to specify.
+## Important Information in Pipeline Examples
+- on triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever trigger you would want to use.
 - they have shallow fetch set to 0. this is required for SonarScanner to properly analyze your project.  
 - for more information on how to limit your analysis scope and parameters available, please check **SonarScanner Analysis Scope** and **SonarScanner Analysis Parameters** in the Important Links section.
 - Please remember that there are different tasks for SonarQube Server and SonarQube Cloud. Examples for both are provided.
