@@ -1,7 +1,7 @@
 ## Overview
 
-This project is an example of using GitHub Actions pipeline for a python project. It demonstrates how to set up a CI/CD pipeline for a Python application.  
-We have multiple CI/CD Pipeline examples, one for running the SonarScanner and sending the results to SonarQube Server and the other for sending the results to SonarQube Cloud.  
+This project is an example of setting up the SonarScanner Analysis with GitHub Actions pipeline for a python project.  
+We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server instance and the other to SonarQube Cloud instance.   
 
 PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTION PIPELINES  
 GitHub - SonarQube Server Integration > https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/  
