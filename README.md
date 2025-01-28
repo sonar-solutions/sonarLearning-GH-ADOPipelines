@@ -11,13 +11,13 @@ GitHub Actions Pipelines - SonarQube Cloud > https://docs.sonarsource.com/sonarq
 - on triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever trigger you would want to use.
 - they have shallow fetch set to 0. this is required for SonarScanner to properly analyze your project.  
 - for more information on how to limit your analysis scope and parameters available, please check **SonarScanner Analysis Scope** and **SonarScanner Analysis Parameters** in the Important Links section.
-- Please remember that there are different tasks for SonarQube Server and SonarQube Cloud. Examples for both are provided.
+- The action used for SonarScanner Analysis is **sonarqube-scan-action**, which applies for both SonarQube Server and SonarQube Cloud. But they require different parameters. Examples for both are provided.
     - SonarQube Cloud Example: sonarqube-cloud.yml  
     - SonarQube Server Example: sonarqube-server.yml 
 
 ## Important Links
-SonarQube Server Scan GitHub Action task > https://github.com/marketplace/actions/official-sonarqube-scan
-SonarQube Cloud Scan GitHub Action task >  https://github.com/marketplace/actions/sonarqube-cloud-scan
+SonarQube Server | Cloud Scan GitHub Action task > https://github.com/marketplace/actions/official-sonarqube-scan
+SonarQube Cloud Scan GitHub Action task (not used in example, but available if needed) >  https://github.com/marketplace/actions/sonarqube-cloud-scan
 SonarScanner Analysis Scope > https://docs.sonarsource.com/sonarqube-server/latest/project-administration/analysis-scope/  
 SonarScanner Analysis Parameters > https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/analysis-parameters/  
 
