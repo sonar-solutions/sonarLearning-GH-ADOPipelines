@@ -16,8 +16,8 @@ GitHub Actions Pipelines - SonarQube Cloud > https://docs.sonarsource.com/sonarq
     - SonarQube Server Example: sonarqube-server.yml 
 
 ## Important Links
-SonarQube Server | Cloud Scan GitHub Action task > https://github.com/marketplace/actions/official-sonarqube-scan
-SonarQube Cloud Scan GitHub Action task (not used in example, but available if needed) >  https://github.com/marketplace/actions/sonarqube-cloud-scan
+SonarQube Server | Cloud Scan GitHub Action task > https://github.com/marketplace/actions/official-sonarqube-scan  
+SonarQube Cloud Scan GitHub Action task (not used in example, but available if needed) >  https://github.com/marketplace/actions/sonarqube-cloud-scan  
 SonarScanner Analysis Scope > https://docs.sonarsource.com/sonarqube-server/latest/project-administration/analysis-scope/  
 SonarScanner Analysis Parameters > https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/analysis-parameters/  
 
