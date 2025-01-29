@@ -11,7 +11,7 @@ We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server
 - On triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever trigger you would want to use.
 - They have shallow fetch set to 0. this is required for SonarScanner to properly analyze your project.  
 - For more information on how to limit your analysis scope and parameters available, please check **SonarScanner Analysis Scope** and **SonarScanner Analysis Parameters** in the Important Links section.
-- The action used for SonarScanner Analysis is **sonarqube-scan-action**, which applies for both SonarQube Server and SonarQube Cloud. But they require different parameters. Examples for both are provided.
+- The action used for SonarScanner Analysis is `sonarqube-scan-action`, which applies for both SonarQube Server and SonarQube Cloud. But they require different parameters. Examples for both are provided.
     - SonarQube Cloud Example: sonarqube-cloud.yml  
     - SonarQube Server Example: sonarqube-server.yml 
 
@@ -25,8 +25,8 @@ We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server
 
 ## Example to fail the entire pipeline if Quality Gate fails
 There may be situations or branches in which you will like to fail the pipeline if the SonarQube Quality Gate fails in order to stop any other steps in the pipeline.  
-This can be done by adding ```sonar.qualitygate.wait=true``` 
-to the **with: args: >** section in the **SonarQube Scan** task.  
+This can be done by adding `sonar.qualitygate.wait=true`
+to the `with: args: >` section in the **SonarQube Analysis** task.  
 
 Example:
 ``` sh
