@@ -28,7 +28,7 @@ There may be situations or branches in which you will like to fail the pipeline 
 This can be done by adding ```sonar.qualitygate.wait=true``` 
 to the **with: args: >** section in the **SonarQube Scan** task.  
 
-Example
+Example:
 ``` sh
     with:
         args: >
