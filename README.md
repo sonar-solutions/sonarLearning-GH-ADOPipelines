@@ -5,7 +5,7 @@ We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server
 
 **PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTION PIPELINES**  
 [GitHub - SonarQube Server Integration](https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/)  
-[GitHub Actions Pipelines - SonarQube Cloud](https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/#ci-based-analysis)
+[GitHub Actions Pipelines - SonarQube Cloud](https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/)
 
 ## Important Information in Examples
 - On triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever trigger you would want to use.
