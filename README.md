@@ -1,16 +1,16 @@
 ## Overview
 
-This project is an example of setting up the SonarScanner Analysis with GitHub Actions pipeline for a python project.  
+This repository is an example of setting up the SonarScanner Analysis with GitHub Actions pipeline for a python project.  
 We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server instance and the other to SonarQube Cloud instance.   
 
 **PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTION PIPELINES**  
 [GitHub - SonarQube Server Integration](https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/)  
 [GitHub Actions Pipelines - SonarQube Cloud](https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/#ci-based-analysis)
 
-## Important Information in Pipeline Examples
-- on triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever trigger you would want to use.
-- they have shallow fetch set to 0. this is required for SonarScanner to properly analyze your project.  
-- for more information on how to limit your analysis scope and parameters available, please check **SonarScanner Analysis Scope** and **SonarScanner Analysis Parameters** in the Important Links section.
+## Important Information in Examples
+- On triggers are set to only execute on changes to specific branches and a specific directory in the project, this can be modified with whatever trigger you would want to use.
+- They have shallow fetch set to 0. this is required for SonarScanner to properly analyze your project.  
+- For more information on how to limit your analysis scope and parameters available, please check **SonarScanner Analysis Scope** and **SonarScanner Analysis Parameters** in the Important Links section.
 - The action used for SonarScanner Analysis is **sonarqube-scan-action**, which applies for both SonarQube Server and SonarQube Cloud. But they require different parameters. Examples for both are provided.
     - SonarQube Cloud Example: sonarqube-cloud.yml  
     - SonarQube Server Example: sonarqube-server.yml 
@@ -44,7 +44,7 @@ In GitHub Actions, you need to have the following set up in your Project:
 - Select a Target branch to apply the rule to
 
 SonarQube Documentation:
-https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/setting-up-at-project-level/#prevent-pull-request-merge  
+[Prevent Pull Request Merge](https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/setting-up-at-project-level/#prevent-pull-request-merge)  
 
 In SonarQube Server, you need to make sure the DevOps Integration is correctly configured. Go to the Project, in Project Settings > General Settings > DevOps Platform Integration.
 In SonarQube Cloud, you need to make sure the DevOps Integration is correctly configured. Go to the Project, in Administration > General Settings > Repository Binding. 
