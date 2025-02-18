@@ -14,7 +14,8 @@ We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server
 - The action used for SonarScanner Analysis is `sonarqube-scan-action`, which applies for both SonarQube Server and SonarQube Cloud. But they require different parameters. Examples for both are provided.
     - SonarQube Cloud Example: sonarqube-cloud.yml  
     - SonarQube Server Example: sonarqube-server.yml 
-- For both `projectKey (/k)` and `projectName(/n)`, we are using the following `$(echo ${{ github.repository }} | cut -d'/' -f1)-gh_$(echo ${{ github.repository }}` as naming convention. This results in `OrgName-gh_RepoName`  
+- For both `sonar.projectKey` and `sonarprojectName`, we are using the following `$(echo ${{ github.repository }} | cut -d'/' -f1)-gh_$(echo ${{ github.repository }}` as naming convention. This results in `OrgName-gh_RepoName`.
+- Please make sure you have set up your `SONAR_TOKEN` and `SONAR_HOST_URL` secrets or variables. In the command used, `SONAR_TOKEN` is set up as a secret and `SONAR_HOST_URL` is set a variable. If set up differently please change the prefix in the respective parameter.   
 
 ## Important Links
 [SonarQube Server - GitHub Integration](https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/)  
@@ -25,9 +26,8 @@ We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server
 [SonarScanner Analysis Parameters](https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/analysis-parameters/)  
 
 ## Example to fail the entire pipeline if Quality Gate fails
-There may be situations or branches in which you will like to fail the pipeline if the SonarQube Quality Gate fails in order to stop any other steps in the pipeline.  
-This can be done by adding `sonar.qualitygate.wait=true`
-to the `with: args: >` section in the **SonarQube Analysis** task.  
+In certain situations, you may want to halt/fail the pipeline if the SonarQube Quality Gate fails, preventing subsequent steps from executing.  
+This can be achieved by adding `sonar.qualitygate.wait=true` to the `with: args: >` section in the **SonarQube Analysis** task.  
 
 Example:
 ``` sh
