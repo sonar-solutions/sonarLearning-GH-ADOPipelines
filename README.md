@@ -63,3 +63,6 @@ def fun(a):
 4. Create PR to merge to the target branch you have set the Branch Protection Rule
 5. Wait for the SonarQube Scanner analysis to complete
 6. It should Fail and have the PR get blocked from merging
+
+__**For more examples please check:**__
+[Onboarding Examples](https://github.com/sonar-solutions/Onboarding-Examples-List)
