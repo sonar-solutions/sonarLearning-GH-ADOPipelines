@@ -12,7 +12,7 @@ on:
       types: [opened, synchronize, reopened]
   workflow_dispatch:
 
-name: SonarQube-Server
+name: SonarQube-Analysis
 jobs:
   sonarqube:
     runs-on: ubuntu-latest
