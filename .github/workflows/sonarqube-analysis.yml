@@ -1,13 +1,7 @@
 on:
   # Trigger analysis when pushing to your main branches, and when creating a pull request.
   push:
-    paths:
-      - 'src/**'
-    branches:
-      - main
-      - master
-      - develop
-      - 'releases/**'
+    branches: [main, master, develop]
   pull_request:
       types: [opened, synchronize, reopened]
   workflow_dispatch:
@@ -37,8 +31,6 @@ jobs:
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
       uses: sonarsource/sonarqube-quality-gate-action@v1
-      with:
-         pollingTimeoutSec: 600
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }} #OPTIONAL
