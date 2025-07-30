@@ -23,6 +23,7 @@ jobs:
         args: >
           -Dsonar.verbose=true
           -Dsonar.projectKey=your-project-key
+          -Dsonar.organization=your-organization
    # Check the Quality Gate status.
     - name: SonarQube Quality Gate check
       id: sonarqube-quality-gate-check
