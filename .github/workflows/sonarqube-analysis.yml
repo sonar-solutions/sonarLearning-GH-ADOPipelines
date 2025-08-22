@@ -23,6 +23,5 @@ jobs:
       with:
         args: >
           -Dsonar.verbose=true
-          -Dsonar.projectKey=SonarQube-Org-Example_SonarQube-Example
-          -Dsonar.organization=sqc-org-example
+          -Dsonar.projectKey=SonarQube-Project
 
