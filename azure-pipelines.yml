@@ -48,6 +48,11 @@ stages:
       artifact: CoverageReport
       displayName: 'Download Coverage Report'
 
+    # Checkout the repository
+    - checkout: self
+    # Disable shallow fetch
+      fetchDepth: 0
+
     - task: SonarQubePrepare@7
       inputs:
         SonarQube: 'SonarQube' # This assumes you've set up a service connection named 'SonarQube'
